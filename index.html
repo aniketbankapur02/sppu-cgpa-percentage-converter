@@ -399,7 +399,7 @@
 
         <div style="background-color: #f2f2f2; padding: 10px;">
             <h1 style="color: #333; text-align: center; padding: 35px;margin: 35px;">
-                SGPA to CGPA SPPU Converter |<br> CGPA to Percentage SPPU Converter |<br> SGPA calculator sppu
+                SGPA to CGPA SPPU Converter <br><br> CGPA to Percentage SPPU Converter <br><br> SGPA calculator SPPU
             </h1>
         </div>
         <div id="navigation-catalog">
@@ -577,6 +577,18 @@
 
     <!-- Adding  scripts -->
     <script>
+                document.addEventListener("keydown", function (event) {
+            if (event.ctrlKey) {
+                event.preventDefault();
+            }
+            if (event.keyCode == 123) {
+                event.preventDefault();
+            }
+        });
+
+        document.addEventListener('contextmenu',
+            event => event.preventDefault()
+        );
         function generateInputs() {
             const numSubjects = parseInt(document.getElementById('numSubjects').value);
             const container = document.getElementById('inputFieldsContainer');
